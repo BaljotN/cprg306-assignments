@@ -15,6 +15,7 @@ export default function ItemList(){
     category: "bakery",
   };
    
+  
   const item3 = {
     name: "eggs, dozen 🥚",
     quantity: 2,
