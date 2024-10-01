@@ -20,7 +20,7 @@ let linkStyles = "underling text-cyan-600 hover:text-cyan-300"
           <Link href={"./week-3/props"} className={linkStyles}>Link to week-3 props</Link>
         </li>
         <li>
-          <Link href={"./week-3/assignment"} className={linkStyles}>Link to week-3 assignment</Link>
+          <Link href={"./week-3"} className={linkStyles}>Link to week-3 assignment</Link>
         </li>
         <li>
           <Link href={"./week-4/functions"} className={linkStyles}>Link to week-4 functions</Link>
