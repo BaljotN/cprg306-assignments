@@ -14,9 +14,9 @@ export default function AdoptionPage(){
 
     const[showForm,setShowForm] = useState(false);
 
-    const addNewDog = (newDogObj) => {
-        setDogList([...dogList, newDogObj])
-    }
+    // const addNewDog = (newDogObj) => {
+    //     setDogList([...dogList, newDogObj])
+    // }
 
     const removeDog = (event) => {
         let thisDogList = dogList.filter( 
