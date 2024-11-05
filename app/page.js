@@ -55,6 +55,9 @@ let linkStyles = "underling text-cyan-600 hover:text-cyan-300"
         <li>
           <Link href={"./week-8/in-class-stuff"} className={linkStyles}>Link to week-8 API stuff</Link>
         </li>
+        <li>
+          <Link href={"./week-8"} className={linkStyles}>Link to week-8 Assignment</Link>
+        </li>
         
       </ul>
     </main>
