@@ -22,7 +22,6 @@ export default function AdoptionPage(){
         let thisDogList = dogList.filter( 
             (dog) => dog.id != event.target.getAttribute("data-dog-id")
         );
-
         setDogList(thisDogList);
     }
 
