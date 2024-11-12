@@ -58,6 +58,8 @@ let linkStyles = "underling text-cyan-600 hover:text-cyan-300"
         <li>
           <Link href={"./week-8"} className={linkStyles}>Link to week-8 Assignment</Link>
         </li>
+        <li><Link href="./week-9/" className={linkStyles}>Week 9 - Firebase Auth</Link></li>
+        <li><Link href="./week9-assignment/" className={linkStyles}>Link to Week-9 Assignment</Link></li>
         
       </ul>
     </main>
