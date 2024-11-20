@@ -1,18 +1,35 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ItemList from "./item-list";
 import NewItem from "./new-item";
 import MealIdeas from "./meal-ideas";
-import itemsData from "./items.json";
+import {getItems, addItem} from "../_services/shopping-list-service";
+import {useUserAuth} from "../_utils/auth-context";
 
 export default function Page() {
-    const [items, setItems] = useState(itemsData);
+    const [items, setItems] = useState([]);
     const [selectedItemName, setSelectedItemName] = useState(""); 
+    const {user} = useUserAuth();
 
-    
-    const handleAddItem = (newItemObj) => {
-        setItems([...items, newItemObj]);
+   
+    async function loadItems(user){
+        const items = await getItems(user.uid);
+        setItems(items);
+    }
+
+    useEffect(() => {
+        if (user) {
+            loadItems(user);
+        }
+    }, [user]);
+
+    const handleAddItem = async (newItemObj) => {
+        const userId = user.uid;
+        const newItemId = await addItem(userId, newItemObj);
+        const newItemWithId = {...newItemObj, id:newItemId};
+
+        setItems((previousItems) => [...previousItems, newItemWithId]);
     };
 
     const handleItemSelect = (item) => {
